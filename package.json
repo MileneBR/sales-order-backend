@@ -2,6 +2,7 @@
   "name": "sales-order-backend",
   "version": "1.0.0",
   "description": "A simple CAP project.",
+  "repository": "sales-order-backend",
   "dependencies": {
     "@sap/cds": "^9",
     "express": "^4"
