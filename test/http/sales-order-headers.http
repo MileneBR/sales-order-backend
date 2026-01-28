@@ -1,0 +1,21 @@
+GET http://localhost:4004/odata/v4/main/SalesOrdersHeaders
+Content-Type: application/json
+
+###
+
+POST http://localhost:4004/odata/v4/main/SalesOrdersHeaders
+Content-Type: application/json
+
+{
+    "id": "1234"
+}
+
+###
+
+PATCH http://localhost:4004/odata/v4/main/SalesOrdersHeaders
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:4004/odata/v4/main/SalesOrdersHeaders
+Content-Type: application/json
