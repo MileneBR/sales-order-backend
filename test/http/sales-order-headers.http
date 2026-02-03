@@ -1,21 +1,27 @@
-GET http://localhost:4004/odata/v4/main/SalesOrdersHeaders
+@localhost=localhost:4004/odata/v4/main
+
+GET http://{{localhost}}/SalesOrdersHeaders
 Content-Type: application/json
 
 ###
 
-POST http://localhost:4004/odata/v4/main/SalesOrdersHeaders
+POST http://{{localhost}}/SalesOrdersHeaders
+Content-Type: application/json
+
+//{
+  //  "id": "1234"
+//}
+
+###
+
+PUT http://{{localhost}}/SalesOrdersHeaders(id=fe27fd5f-452d-43a4-a81d-8ac8c8d3caff)
 Content-Type: application/json
 
 {
-    "id": "1234"
+    "modifiedBy": "mimi"
 }
 
 ###
 
-PATCH http://localhost:4004/odata/v4/main/SalesOrdersHeaders
-Content-Type: application/json
-
-###
-
-DELETE http://localhost:4004/odata/v4/main/SalesOrdersHeaders
+DELETE http://{{localhost}}/SalesOrdersHeaders(id=44b15ec5-3ed6-47a7-8a79-37328a3a9244)
 Content-Type: application/json

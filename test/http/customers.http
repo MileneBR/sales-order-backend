@@ -1,0 +1,43 @@
+@localhost=localhost:4004/odata/v4/main
+@id=dcc9401d-914f-4131-a7a4-15a73ab9954c
+
+GET http://{{localhost}}/Customers
+Content-Type: application/json
+
+###
+
+POST http://{{localhost}}/Customers
+Content-Type: application/json
+
+{
+    "id": "dcc9401d-914f-4131-a7a4-15a73ab9954c",
+    "firstName": "Milene",
+    "lastName": "Ribeiro",
+    "email": "milenebribeiro@hotmail.com"
+}
+//{
+  //  "id": "1234"
+//} ctrl + ; comenta em bloco
+
+###
+
+PUT http://{{localhost}}/Customers(id={{id}})
+Content-Type: application/json
+
+{
+    "firstName": "mimi"
+}
+
+###
+
+PATCH http://{{localhost}}/Customers(id={{id}})
+Content-Type: application/json
+
+{
+    "firstName": "mimi"
+}
+
+###
+
+DELETE http://{{localhost}}/Customers(id={{id}})
+Content-Type: application/json

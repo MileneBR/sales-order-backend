@@ -4,12 +4,16 @@
   "description": "A simple CAP project.",
   "repository": "sales-order-backend",
   "dependencies": {
+    "@cap-js/cds-typer": "^0.38.0",
     "@sap/cds": "^9",
-    "express": "^4"
+    "@types/node": "^25.1.0",
+    "express": "^4",
+    "typescript": "^5.9.3"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
-    "git-commit-msg-linter": "^5.0.8"
+    "git-commit-msg-linter": "^5.0.8",
+    "tsx": "^4.21.0"
   },
   "scripts": {
     "start": "cds-serve",
