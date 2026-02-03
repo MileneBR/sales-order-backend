@@ -1,6 +1,9 @@
 @localhost=localhost:4004/odata/v4/main
+@id=fe27fd5f-452d-43a4-a81d-8ac8c8d3caff
+@customerId=dcc9401d-914f-4131-a7a4-15a73ab9954c
+@productId=dc078ff0-a5b8-4670-afa5-018afd094154
 
-GET http://{{localhost}}/SalesOrdersHeaders
+GET http://{{localhost}}/SalesOrdersHeaders?$filter=id eq {{id}}&$expand=items
 Content-Type: application/json
 
 ###
@@ -8,13 +11,24 @@ Content-Type: application/json
 POST http://{{localhost}}/SalesOrdersHeaders
 Content-Type: application/json
 
-//{
-  //  "id": "1234"
-//}
+  {
+    "id": "{{id}}",
+    "customer_id": "{{customerId}}",
+    "totalAmount": 10.89,
+    "items":[
+            { 
+              "id": "e5694784-d9cc-432f-bad4-2529167f9587",
+              "header_id": "{{id}}",
+              "product_id":  "{{productId}}",
+              "quantity": 10,
+              "price": 2.99
+            }
+            ]
+  }
 
 ###
 
-PUT http://{{localhost}}/SalesOrdersHeaders(id=fe27fd5f-452d-43a4-a81d-8ac8c8d3caff)
+PUT http://{{localhost}}/SalesOrdersHeaders(id={{id}})
 Content-Type: application/json
 
 {
@@ -23,5 +37,5 @@ Content-Type: application/json
 
 ###
 
-DELETE http://{{localhost}}/SalesOrdersHeaders(id=44b15ec5-3ed6-47a7-8a79-37328a3a9244)
+DELETE http://{{localhost}}/SalesOrdersHeaders(id={{id}})
 Content-Type: application/json
