@@ -1,0 +1,44 @@
+@localhost=localhost:4004/odata/v4/main
+@id=dc078ff0-a5b8-4670-afa5-018afd09415
+
+GET http://{{localhost}}/Products
+Content-Type: application/json
+
+###
+
+POST http://{{localhost}}/Products
+Content-Type: application/json
+
+{
+    "id": "{{id}}",
+    "name": "Extrato de Tomate",
+    "price": 22.22
+}
+
+
+//{
+  //  "id": "1234"
+//} ctrl + ; comenta em bloco
+
+###
+
+PUT http://{{localhost}}/Products(id={{id}})
+Content-Type: application/json
+
+{
+    "firstName": "mimi"
+}
+
+###
+
+PATCH http://{{localhost}}/Products(id={{id}})
+Content-Type: application/json
+
+{
+    "firstName": "mimi"
+}
+
+###
+
+DELETE http://{{localhost}}/Products(id={{id}})
+Content-Type: application/json

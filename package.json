@@ -12,12 +12,13 @@
   },
   "devDependencies": {
     "@cap-js/sqlite": "^2",
+    "@types/axios": "^0.14.4",
     "git-commit-msg-linter": "^5.0.8",
     "tsx": "^4.21.0"
   },
   "scripts": {
     "start": "cds-serve",
-    "dev": "cds watch"
+    "dev": "cds-tsx watch"
   },
   "private": true
 }
